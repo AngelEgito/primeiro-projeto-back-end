@@ -13,6 +13,10 @@ const MulherSchema = new mongoose.Schema({
     minibio: {
         type: String,
         require: true,
+    },
+    citacao: {
+        type: String,
+        require: true,
     }
 })
 
