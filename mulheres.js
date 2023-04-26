@@ -59,14 +59,14 @@ async function corrigeMulher(request, response) {
         }
 
         if (request.body.citacao) {
-            mulherEncontrada = request.body.citacao
+            mulherEncontrada.citacao = request.body.citacao
         }
 
         const mulherAtualizadaNoBancoDeDados = await mulherEncontrada.save()
         
         response.json(mulherAtualizadaNoBancoDeDados)
     
-    }catch(erro) {
+    } catch(erro) {
         console.log(erro)
     }
 
